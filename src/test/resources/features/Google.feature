@@ -5,4 +5,4 @@ Feature: Probar la busqueda en Google
       When Ingreso mi criterio de busqueda
        And Click en el boton buscar
       Then Obtengo resultado
-
+      Then Realizo comprobacion --> comparando el dato del titulo de la pagina

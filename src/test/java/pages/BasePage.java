@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,6 +41,22 @@ public class BasePage {
     public void write(String locator, String textToWrite) {
         find(locator).clear();
         find(locator).sendKeys(textToWrite);
+    }
+
+    public void maximize() {
+        driver.manage().window().maximize();
+    }
+
+    public String title1() {
+       return driver.getTitle();
+    }
+
+    public void comparation(String locator, String TxtPag) {
+        Assert.assertEquals(locator, TxtPag);
+    }
+
+    public void closeNavigator() {
+        driver.quit();
     }
 
 }

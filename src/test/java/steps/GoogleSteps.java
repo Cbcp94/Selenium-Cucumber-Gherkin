@@ -13,7 +13,7 @@ public class GoogleSteps {
 
     @When("^Ingreso mi criterio de busqueda$")
     public void enterSearchCriteria(){
-        google.enterSearchCriteria("Google");
+        google.enterSearchCriteria("Ecuador");
     }
 
     @And("^Click en el boton buscar$")
@@ -23,6 +23,12 @@ public class GoogleSteps {
 
     @Then("^Obtengo resultado$")
     public void validateResults(){
-
+        google.obtengoTituloPagina();
     }
+
+    @Then("^Realizo comprobacion --> comparando el dato del titulo de la pagina$")
+    public void comprobation() throws InterruptedException {
+        google.compararTitulo();
+    }
+
 }
